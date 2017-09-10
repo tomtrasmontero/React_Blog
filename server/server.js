@@ -14,11 +14,11 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
 app.use('/api', require('./routes'));
 
 //  any other routes will send error 404
-// app.use((req, res, next) => {
-//   const err = new Error('Not found.');
-//   err.status = 404;
-//   next(err);
-// });
+app.use((req, res, next) => {
+  const err = new Error('Not found.');
+  err.status = 404;
+  next(err);
+});
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.

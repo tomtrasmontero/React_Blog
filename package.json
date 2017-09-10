@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server/server.js",
     "start:webpack_frontend": "webpack-dev-server",
     "start:dev": "npm run webpack -- -w & DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
     "webpack": "./node_modules/webpack/bin/webpack.js"
