@@ -1,0 +1,9 @@
+.example {
+  h1 {
+    color: #106dc4;
+
+    &:hover {
+      color: #942b2b;
+    }
+  }
+}
