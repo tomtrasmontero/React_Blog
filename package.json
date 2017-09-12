@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "DATABASE_URL=postgres://localhost/react_blog nodemon ./node_modules/mocha/bin/mocha",
+    "test": "DATABASE_URL=postgres://localhost/react_test_blog nodemon ./node_modules/mocha/bin/mocha",
     "start": "node server/server.js",
     "start:webpack_frontend": "webpack-dev-server",
-    "start:dev": "npm run webpack -- -w & DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
+    "start:dev": "SYNC=true npm run webpack -- -w & DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
     "webpack": "./node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
@@ -23,7 +23,8 @@
     "sequelize": "^4.8.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "body-parser": "^1.18.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

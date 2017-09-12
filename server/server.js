@@ -2,12 +2,17 @@ const express = require('express');
 
 const path = require('path');
 
+const db = require('./db');
+
 const app = express();
 
 const port = process.env.PORT || 3001;
 
 // server up the 'bundled' file !!! and not the client
 app.use(express.static(path.join(__dirname, '../build')));
+
+// used for testing purposes
+app.use(require('body-parser').json());
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
 
@@ -27,3 +32,13 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => console.log(`listening on Port:${port}`));
+
+// sync server on start
+if (process.env.SYNC) {
+  db.sync()
+    .then(() => {})
+    .catch(err => console.log(err));
+}
+
+// for testing
+module.exports = app;
