@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import WelcomeMessage from './components/testComponents';
-import SCSS from './styles/main.scss';
+// import style sheets
+import './styles/main.scss';
 
 const appData = {
   title: 'React Blog',
