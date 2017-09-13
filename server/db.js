@@ -14,7 +14,7 @@ const User = db.define('user', {
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
-    default: false,
+    defaultValue: false,
   },
 });
 
@@ -46,9 +46,9 @@ const sync = () => {
 };
 
 const truncate = () => {
-  const deleteUserTbl = User.destroy({ where: {} });
-  const deleteCommentTbl = Comment.destroy({ where: {} });
-  const deleteBlogTbl = Blog.destroy({ where: {} });
+  const deleteUserTbl = User.destroy({ where: {}, truncate: true });
+  const deleteCommentTbl = Comment.destroy({ where: {}, truncate: true });
+  const deleteBlogTbl = Blog.destroy({ where: {}, truncate: true });
 
   return Promise.all([deleteUserTbl, deleteCommentTbl, deleteBlogTbl])
     .then(result => result);

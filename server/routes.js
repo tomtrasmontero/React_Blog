@@ -18,3 +18,35 @@ app.get('/user/:id', (req, res, next) => {
     .then(user => res.send(user))
     .catch(next);
 });
+
+// blog routes
+app.post('/blog/create', (req, res, next) => {
+  db.Blog.create({
+    title: req.body.title,
+    body: req.body.body,
+    userId: req.body.userId,
+  })
+    .then(blog => res.send(blog))
+    .catch(next);
+});
+
+app.get('/blog/:id', (req, res, next) => {
+  db.Blog.findAll({ where: { id: req.params.id } })
+    .then(blog => res.send(blog))
+    .catch(next);
+});
+
+app.get('/blogs', (req, res, next) => {
+  db.Blog.findAll({ where: {} })
+    .then(blogs => res.send(blogs))
+    .catch(next);
+});
+
+app.put('/blog/:id', (req, res, next) => {
+  db.Blog.update({
+    title: req.body.title,
+    body: req.body.body,
+  }, { where: { id: req.body.id } })
+    .then(blog => res.send(blog))
+    .catch(next);
+});
