@@ -50,3 +50,22 @@ app.put('/blog/:id', (req, res, next) => {
     .then(blog => res.send(blog))
     .catch(next);
 });
+
+// comment routes
+
+app.post('/blog/comment', (req, res, next) => {
+  db.Comment.create({
+    userId: req.body.userId,
+    userName: req.body.userName,
+    blogId: req.body.blogId,
+    comment: req.body.comment,
+  })
+    .then(comment => res.send(comment))
+    .catch(next);
+});
+
+app.get('/blog/:blogId/comments', (req, res, next) => {
+  db.Comment.findAll({ where: { blogId: req.params.blogId } })
+    .then(result => res.send(result))
+    .catch(next);
+});

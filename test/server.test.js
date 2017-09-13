@@ -3,6 +3,41 @@ const client = require('supertest');
 const db = require('../server/db');
 const app = require('../server/server');
 
+const createBlog = () => {
+  const blogData = client(app)
+    .post('/api/blog/create')
+    .send({
+      title: 'test blog title',
+      body: 'test blog body',
+      userId: 1,
+    });
+
+  return blogData;
+};
+
+const createUser = () => {
+  const userData = client(app)
+    .post('/api/user')
+    .send({
+      name: 'blog foo',
+      password: 'blog bar',
+      isAdmin: true,
+    });
+
+  return userData;
+};
+
+const createComment = () => {
+  const userComment = client(app).post('/api/blog/comment')
+    .send({
+      userId: 1,
+      userName: 'blog foo',
+      blogId: 1,
+      comment: 'comment foo',
+    });
+
+  return userComment;
+};
 
 describe('routes', () => {
   // sync test database first
@@ -22,16 +57,10 @@ describe('routes', () => {
     });
 
     it('Creates a admin user and be able to get the user', (done) => {
-      client(app)
-        .post('/api/user')
-        .send({
-          name: 'foo',
-          password: 'bar',
-          isAdmin: true,
-        })
+      createUser()
         .then((result) => {
           expect(result.status).to.equal(200);
-          expect(result.body.name).to.equal('foo');
+          expect(result.body.name).to.equal('blog foo');
           expect(result.body.id).to.equal(1);
           expect(result.body.isAdmin).to.equal(true);
           return client(app).get('/api/user/1');
@@ -39,7 +68,7 @@ describe('routes', () => {
         .then((result) => {
           expect(result.status).to.equal(200);
           expect(result.body.length).to.equal(1);
-          expect(result.body[0].name).to.equal('foo');
+          expect(result.body[0].name).to.equal('blog foo');
           expect(result.body[0].id).to.equal(1);
           expect(result.body[0].isAdmin).to.equal(true);
           done();
@@ -71,27 +100,9 @@ describe('routes', () => {
   });
 
   describe('Blog Table', () => {
-    const createBlog = () => {
-      const blogData = client(app)
-        .post('/api/blog/create')
-        .send({
-          title: 'test blog title',
-          body: 'test blog body',
-          userId: 1,
-        });
-
-      return blogData;
-    };
-
     // creates user for each test. Blog table associated with User Fkey
     before((done) => {
-      client(app)
-        .post('/api/user')
-        .send({
-          name: 'blog foo',
-          password: 'blog bar',
-          isAdmin: true,
-        })
+      createUser()
         .then(() => done())
         .catch(done);
     });
@@ -141,6 +152,34 @@ describe('routes', () => {
         .then((result) => {
           expect(result.body[0].title).to.equal('edited blog title');
           expect(result.body[0].body).to.equal('edited blog body');
+          done();
+        });
+    });
+  });
+
+  describe('Comments Table', () => {
+    beforeEach((done) => {
+      db.sync()
+        .then(() => createUser())
+        .then(() => createBlog())
+        .then(() => done())
+        .catch(done);
+    });
+
+    it('create a comment', (done) => {
+      createComment()
+        .then((result) => {
+          expect(result.body.userName).to.equal('blog foo');
+          expect(result.body.comment).to.equal('comment foo');
+          done();
+        });
+    });
+
+    it('fetches all comment from a specific user', (done) => {
+      Promise.all([createComment(), createComment()])
+        .then(() => client(app).get('/api/blog/1/comments'))
+        .then((result) => {
+          expect(result.body.length).to.equal(2);
           done();
         });
     });
