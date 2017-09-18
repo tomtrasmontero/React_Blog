@@ -25,3 +25,8 @@ get all blogs
 
 get specific blog - include all comments
 /blogs/:id
+
+Todo:
+Setup Redux store
+Setup component matching wireframe
+Test front-end
