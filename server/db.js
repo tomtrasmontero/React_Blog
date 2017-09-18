@@ -45,14 +45,6 @@ const sync = () => {
   return syncDatabase;
 };
 
-const truncate = () => {
-  const deleteUserTbl = User.destroy({ where: {}, truncate: true });
-  const deleteCommentTbl = Comment.destroy({ where: {}, truncate: true });
-  const deleteBlogTbl = Blog.destroy({ where: {}, truncate: true });
-
-  return Promise.all([deleteUserTbl, deleteCommentTbl, deleteBlogTbl])
-    .then(result => result);
-};
 
 // DB association
 Comment.belongsTo(User);
@@ -69,5 +61,4 @@ module.exports = {
     Comment,
   },
   sync,
-  truncate,
 };

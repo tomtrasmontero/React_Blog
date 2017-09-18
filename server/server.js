@@ -4,6 +4,8 @@ const path = require('path');
 
 const db = require('./db');
 
+const data = require('./seed');
+
 const app = express();
 
 const port = process.env.PORT || 3001;
@@ -36,7 +38,7 @@ app.listen(port, () => console.log(`listening on Port:${port}`));
 // sync server on start
 if (process.env.SYNC) {
   db.sync()
-    .then(() => {})
+    .then(() => { data.seed(); })
     .catch(err => console.log(err));
 }
 
