@@ -8,17 +8,18 @@ import thunk from 'redux-thunk';
 // import style sheets
 import './styles/main.scss';
 
+import reducers from './reducers/index';
 import Navbar from './components/NavBar';
 import LandingPage from './components/LandingPage';
 
-import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(promise, thunk)(createStore);
+// const createStoreWithMiddleware = applyMiddleware(promise, ReduxThunk)(createStore);
+const createStoreWithMiddleware = createStore(reducers, applyMiddleware(promise, thunk));
 
 ReactDOM.render(
   <div>
     <Navbar />
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={createStoreWithMiddleware}>
       <BrowserRouter>
         <div>
           <Switch>
