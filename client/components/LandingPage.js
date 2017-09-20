@@ -1,29 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { fetchBlogs } from '../actions/index';
 
 class LandingPage extends Component {
   componentDidMount() {
-    console.log('called did mount', this.props.fetchBlogs);
     this.props.fetchBlogs();
   }
 
   renderBlog() {
-    console.log(this.props.blogs, 'in render blog');
     return this.props.blogs.map(blog => (
-      <div key={blog.id}>{blog.title}</div>
+      <div key={blog.id}>
+        <div>
+          <h2>{blog.title}</h2>
+          <span>{blog.createdAt}</span>
+          <p>{blog.body}</p>
+        </div>
+
+        <div>
+          <Link to={`/blog/${blog.id}`}>
+            <p>link to detail pages with comments(comment#)</p>
+          </Link>
+        </div>
+      </div>
     ));
   }
 
   render() {
     return (
       <div>
-        {this.renderBlog()}
         <h1>Landing Page Here</h1>
-        <ul>
-          <li>List of blog post here</li>
-        </ul>
+        <div>
+          {this.renderBlog()}
+        </div>
       </div>
     );
   }
@@ -32,6 +42,10 @@ class LandingPage extends Component {
 // PropTypes here
 LandingPage.propTypes = {
   fetchBlogs: PropTypes.func.isRequired,
+  blogs: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 const mapStateToProps = state => ({ blogs: state.blogs });

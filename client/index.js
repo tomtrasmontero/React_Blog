@@ -11,18 +11,19 @@ import './styles/main.scss';
 import reducers from './reducers/index';
 import Navbar from './components/NavBar';
 import LandingPage from './components/LandingPage';
+import DetailBlog from './components/Detail_Blog';
 
 
-// const createStoreWithMiddleware = applyMiddleware(promise, ReduxThunk)(createStore);
 const createStoreWithMiddleware = createStore(reducers, applyMiddleware(promise, thunk));
 
 ReactDOM.render(
   <div>
-    <Navbar />
     <Provider store={createStoreWithMiddleware}>
       <BrowserRouter>
         <div>
+          <Navbar />
           <Switch>
+            <Route path="/blog/:id" component={DetailBlog} />
             <Route path="/" component={LandingPage} />
           </Switch>
         </div>
