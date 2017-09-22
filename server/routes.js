@@ -31,7 +31,12 @@ app.post('/blog/create', (req, res, next) => {
 });
 
 app.get('/blog/:id', (req, res, next) => {
-  db.Blog.findAll({ where: { id: req.params.id } })
+  db.Blog.findAll({ where: { id: req.params.id },
+    include:
+    [{
+      model: db.Comment,
+    }],
+  })
     .then(blog => res.send(blog))
     .catch(next);
 });

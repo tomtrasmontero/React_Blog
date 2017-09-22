@@ -10,9 +10,27 @@ class BlogPost extends Component {
     this.props.fetchBlog(id);
   }
 
+  renderComment() {
+    const commentList = this.props.blogs[0].comments;
+
+    if (commentList.length === 0) {
+      return (
+        <div>Be the first to Comment!</div>
+      );
+    }
+
+    const showComments = commentList.map(comment => (
+      <div key={comment.id}>
+        <h3>{comment.comment}</h3>
+        <p>By {comment.userName}</p>
+      </div>
+    ));
+
+    return showComments;
+  }
+
   render() {
     const blog = this.props.blogs[0];
-
     if (!blog) {
       return <div>Loading...</div>;
     }
@@ -23,7 +41,9 @@ class BlogPost extends Component {
         <h3>Title: {blog.title}</h3>
         <p>{blog.body}</p>
 
-        <div>Comment Section Component Here</div>
+        <div>
+          {this.renderComment()}
+        </div>
       </div>
     );
   }
@@ -39,6 +59,7 @@ BlogPost.propTypes = {
   }).isRequired,
   fetchBlog: PropTypes.func.isRequired,
   blogs: PropTypes.arrayOf(PropTypes.shape({
+    comments: PropTypes.array.isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
