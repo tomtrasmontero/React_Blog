@@ -28,7 +28,8 @@ const createUser = () => {
 };
 
 const createComment = () => {
-  const userComment = client(app).post('/api/blog/comment')
+  const userComment = client(app)
+    .post('/api/blog/comment')
     .send({
       userId: 1,
       userName: 'blog foo',

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import thunk from 'redux-thunk';
 // import style sheets
@@ -19,15 +19,16 @@ const createStoreWithMiddleware = createStore(reducers, applyMiddleware(promise,
 ReactDOM.render(
   <div>
     <Provider store={createStoreWithMiddleware}>
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Navbar />
           <Switch>
             <Route path="/blog/:id" component={DetailBlog} />
+
             <Route path="/" component={LandingPage} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </div>
   , document.getElementById('container'),

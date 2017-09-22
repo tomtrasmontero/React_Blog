@@ -9,6 +9,7 @@ const Navbar = () => (
     </Link>
     <img alt="misc background pic" />
     <div>insert Link for Home,About,Github,LinkedIn</div>
+    <button>Login</button>
   </header>
 );
 
