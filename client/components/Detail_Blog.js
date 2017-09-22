@@ -13,7 +13,7 @@ class BlogPost extends Component {
   renderComment() {
     const commentList = this.props.blogs[0].comments;
 
-    if (commentList.length === 0) {
+    if (!commentList) {
       return (
         <div>Be the first to Comment!</div>
       );
@@ -59,7 +59,7 @@ BlogPost.propTypes = {
   }).isRequired,
   fetchBlog: PropTypes.func.isRequired,
   blogs: PropTypes.arrayOf(PropTypes.shape({
-    comments: PropTypes.array.isRequired,
+    comments: PropTypes.array,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,

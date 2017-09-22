@@ -39,12 +39,14 @@ const seed = () => {
   const seedBlogData = db.Blog.create(createBlog());
   const seedBlogData2 = db.Blog.create(createBlog());
   const seedCommentData = db.Comment.create(createComment());
+  const seedCommentData2 = db.Comment.create(createComment());
 
   return Promise.all([
     seedUserData,
     seedBlogData,
     seedBlogData2,
     seedCommentData,
+    seedCommentData2,
   ]);
 };
 
