@@ -1,4 +1,4 @@
-import { FETCH_BLOGS, FETCH_BLOG } from '../actions/index';
+import { FETCH_BLOGS, FETCH_BLOG, CREATE_COMMENT } from '../actions/index';
 
 const ROOT_STATE = [];
 
@@ -15,6 +15,8 @@ export default function (state = ROOT_STATE, action) {
       return [...ROOT_STATE, ...action.payload.data];
     }
     case FETCH_BLOGS:
+      return [...ROOT_STATE, ...action.payload.data];
+    case CREATE_COMMENT:
       return [...ROOT_STATE, ...action.payload.data];
     default:
       return state;

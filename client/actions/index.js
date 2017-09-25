@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const FETCH_BLOGS = 'fetch_blogs';
 export const FETCH_BLOG = 'fetch_blog';
+export const CREATE_COMMENT = 'create_comment';
 
 export const fetchBlogs = () => {
   const request = axios.get('/api/blogs');
@@ -27,6 +28,18 @@ export const fetchBlog = (id) => {
           type: FETCH_BLOG,
           payload: result,
         });
+      });
+  };
+};
+
+export const createComment = (data) => {
+  const request = axios.post('/api/blog/comment', data);
+
+  return (dispatch) => {
+    request
+      .then((result) => {
+        console.log(result);
+        dispatch(fetchBlog(result.data.blogId));
       });
   };
 };

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchBlog } from '../actions/index';
+import PostComment from './Comment_Form';
 
 class BlogPost extends Component {
   componentDidMount() {
@@ -12,8 +13,7 @@ class BlogPost extends Component {
 
   renderComment() {
     const commentList = this.props.blogs[0].comments;
-
-    if (!commentList) {
+    if (commentList.length === 0) {
       return (
         <div>Be the first to Comment!</div>
       );
@@ -29,6 +29,7 @@ class BlogPost extends Component {
     return showComments;
   }
 
+
   render() {
     const blog = this.props.blogs[0];
     if (!blog) {
@@ -42,7 +43,9 @@ class BlogPost extends Component {
         <p>{blog.body}</p>
 
         <div>
-          {this.renderComment()}
+          <PostComment blogId={blog.id} />
+          <br />
+          {!blog.comments ? '' : this.renderComment()}
         </div>
       </div>
     );
