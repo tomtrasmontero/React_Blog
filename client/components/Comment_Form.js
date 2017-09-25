@@ -11,35 +11,74 @@ class PostComment extends Component {
   }
 
   onSubmit(values) {
+    console.log(this.props);
     const commentDataToSubmit = {
       userName: values.userName,
       comment: values.comment,
       blogId: this.props.blogId,
     };
+    this.props.reset();
     this.props.createComment(commentDataToSubmit);
   }
 
+  renderField(field) {
+    const { meta: { error, touched } } = field;
+
+    return (
+      <div>
+        <label htmlFor={field.label}>{field.label}</label>
+        <div>
+          {touched ? error : ''}
+        </div>
+        <input
+          type={field.type}
+          {...field.input}
+        />
+      </div>
+    );
+  }
+
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, submitting, pristine } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit)} >
         <div>
-          <label htmlFor="userName">User Name</label>
-          <Field name="userName" component="input" type="text" />
-          <label htmlFor="comment">Comment</label>
-          <Field name="comment" component="input" type="text" />
-          <button type="submit">Submit</button>
+          <Field name="userName" label="User Name" component={this.renderField} type="text" />
+          <Field name="comment" label="Comment" component={this.renderField} type="text" />
+          <button
+            type="submit"
+            disabled={pristine || submitting}
+          >Submit
+          </button>
         </div>
       </form>
     );
   }
 }
 
+const validate = (values) => {
+  const errors = {};
+
+  if (!values.userName) {
+    errors.userName = 'User Name is Required';
+  }
+
+  if (!values.comment) {
+    errors.comment = 'Please Enter Comment';
+  }
+
+  return errors;
+};
+
 PostComment.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  blogId: PropTypes.number.isRequired,
+  createComment: PropTypes.func.isRequired,
+  reset: PropTypes.func.isRequired,
 };
 
 export default reduxForm({
+  validate,
   // name the form component
   form: 'PostCommentForm',
 })(

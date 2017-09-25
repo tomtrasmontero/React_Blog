@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export const FETCH_BLOGS = 'fetch_blogs';
 export const FETCH_BLOG = 'fetch_blog';
-export const CREATE_COMMENT = 'create_comment';
 
 export const fetchBlogs = () => {
   const request = axios.get('/api/blogs');
@@ -38,7 +37,6 @@ export const createComment = (data) => {
   return (dispatch) => {
     request
       .then((result) => {
-        console.log(result);
         dispatch(fetchBlog(result.data.blogId));
       });
   };
