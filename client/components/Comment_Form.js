@@ -11,7 +11,6 @@ class PostComment extends Component {
   }
 
   onSubmit(values) {
-    console.log(this.props);
     const commentDataToSubmit = {
       userName: values.userName,
       comment: values.comment,
@@ -43,8 +42,18 @@ class PostComment extends Component {
     return (
       <form onSubmit={handleSubmit(this.onSubmit)} >
         <div>
-          <Field name="userName" label="User Name" component={this.renderField} type="text" />
-          <Field name="comment" label="Comment" component={this.renderField} type="text" />
+          <Field
+            name="userName"
+            label="User Name"
+            component={this.renderField}
+            type="text"
+          />
+          <Field
+            name="comment"
+            label="Comment"
+            component={this.renderField}
+            type="text"
+          />
           <button
             type="submit"
             disabled={pristine || submitting}
@@ -75,6 +84,8 @@ PostComment.propTypes = {
   blogId: PropTypes.number.isRequired,
   createComment: PropTypes.func.isRequired,
   reset: PropTypes.func.isRequired,
+  submitting: PropTypes.bool.isRequired,
+  pristine: PropTypes.bool.isRequired,
 };
 
 export default reduxForm({
