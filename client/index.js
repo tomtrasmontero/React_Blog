@@ -5,8 +5,13 @@ import { createStore, applyMiddleware } from 'redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import thunk from 'redux-thunk';
+// use $ to access jquery;
+import 'jquery';
 // import style sheets
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.min';
 import './styles/main.scss';
+
 
 import reducers from './reducers/index';
 import Navbar from './components/NavBar';
@@ -31,5 +36,5 @@ ReactDOM.render(
       </HashRouter>
     </Provider>
   </div>
-  , document.getElementById('container'),
+  , document.getElementById('App'),
 );

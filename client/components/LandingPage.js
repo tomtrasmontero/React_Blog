@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { fetchBlogs } from '../actions/index';
 
+// import assets here
+import logo from '../assets/Landing_Img.jpg';
+
 class LandingPage extends Component {
   componentDidMount() {
     this.props.fetchBlogs();
@@ -29,10 +32,18 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Landing Page Here</h1>
-        <div>
-          {this.renderBlog()}
+      <div className="row">
+        <br />
+        {/* <div className="parallax-container">
+          <div className="parallax"> */}
+            <img src={logo} alt="black and white cover" />
+          {/* </div>
+        </div> */}
+        <div className="col s12">
+          <h1>Landing Page Here</h1>
+          <div>
+            {this.renderBlog()}
+          </div>
         </div>
       </div>
     );

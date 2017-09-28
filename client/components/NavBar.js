@@ -3,13 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <header className="example">
-    <Link to={'/'}>
-      <h1>TomLearnsProgramming Blog</h1>
-    </Link>
-    <img alt="misc background pic" />
-    <div>insert Link for Home,About,Github,LinkedIn</div>
-  </header>
+  <nav id="NavBar">
+    <div className="nav-wrapper example">
+      <a className="left brand-logo hide-on-small-only">
+        Tom Learns Programming Blog
+      </a>
+      <ul className="right">
+        <li>
+          <Link to={'/'}>
+            Home
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
 );
 
 export default Navbar;
