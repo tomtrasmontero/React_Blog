@@ -3,11 +3,21 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { fetchBlogs } from '../actions/index';
+import NavBar from './NavBar';
 
 // import assets here
-import logo from '../assets/Landing_Img.jpg';
+// import logo from '../assets/Landing_Img.jpg';
 
 class LandingPage extends Component {
+  // constructor() {
+  //   super();
+  //
+  //   // initalize parallax
+  //   $(document).ready(() => {
+  //     $('.parallax').parallax();
+  //   });
+  // }
+
   componentDidMount() {
     this.props.fetchBlogs();
   }
@@ -32,17 +42,20 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="row">
-        <br />
-        {/* <div className="parallax-container">
-          <div className="parallax"> */}
-            <img src={logo} alt="black and white cover" />
-          {/* </div>
-        </div> */}
-        <div className="col s12">
-          <h1>Landing Page Here</h1>
+      <div id="LandingPage" className="col s12">
+        <div className="coverImageContainer">
+          <div className="center-text-content">
+            <p>Tom Learns Programming Blog</p>
+          </div>
+        </div>
+
+        <NavBar />
+        <div className="section white">
           <div>
-            {this.renderBlog()}
+            <h1>Landing Page Here</h1>
+            <div>
+              {this.renderBlog()}
+            </div>
           </div>
         </div>
       </div>

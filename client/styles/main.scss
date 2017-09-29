@@ -1,9 +1,8 @@
-#NavBar .example {
-  a {
-    color: #ffffff;
+@import "LandingPage";
+@import "NavBar";
 
-    &:hover {
-      color: #14d427;
+@media only screen and (max-device-width: 450px) {
+    body #App {
+    	width: 100%;
     }
-  }
 }

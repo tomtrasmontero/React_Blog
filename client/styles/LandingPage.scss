@@ -1,0 +1,27 @@
+#LandingPage {
+  div.coverImageContainer {
+    background-image: url('../assets/Landing_Img.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding-top: 61.64%;
+
+    div.center-text-content {
+      text-align: center;
+      color: #d64b1f;
+
+      p {
+        color: #000000;
+        font-weight: bold;
+        margin-top: -40%;
+      }
+    }
+
+  }
+}

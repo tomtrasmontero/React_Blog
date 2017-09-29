@@ -1,4 +1,3 @@
-const Webpack = require('webpack');
 // inject bundle.js into the body of the html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -15,10 +14,6 @@ const injectConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body',
 });
-// add jquery to bundle, access jquery with $ in component
-const injectCustomConfig = new Webpack.ProvidePlugin({
-  $: 'jquery',
-});
 
 module.exports = {
   context: path.join(__dirname, '/client'),
@@ -34,7 +29,6 @@ module.exports = {
     //  to readable syntax
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['es2015', 'react'] } },
-      // { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       //  sass-loader compiles SCSS, css-loader allows us to require the SCSS
       //  and style-loader injects it to our page.
       { test: /\.html$/,
@@ -50,5 +44,5 @@ module.exports = {
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' },
     ],
   },
-  plugins: [injectConfig, injectCleanPlugin, injectCustomConfig],
+  plugins: [injectConfig, injectCleanPlugin],
 };
