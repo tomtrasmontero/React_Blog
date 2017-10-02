@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchBlog } from '../actions/index';
 import PostComment from './Comment_Form';
+import NavBar from './NavBar';
 
 class BlogPost extends Component {
   componentDidMount() {
@@ -38,7 +38,7 @@ class BlogPost extends Component {
 
     return (
       <div>
-        <Link to={'/'}>Back to Home</Link>
+        <NavBar />
         <h3>Title: {blog.title}</h3>
         <p>{blog.body}</p>
 

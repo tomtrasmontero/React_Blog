@@ -1,11 +1,18 @@
 #LandingPage {
+  padding: 0px;
+
   div.coverImageContainer {
-    background-image: url('../assets/Landing_Img.jpg');
+    background-image:
+      linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+      ),
+      url('../assets/Landing_Img.jpg');
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: conver;
     background-position: center;
     width: 100%;
     height: 100%;
@@ -17,11 +24,26 @@
       color: #d64b1f;
 
       p {
-        color: #000000;
+        font-family: Roboto-Bold;
+        color: #ffffff;
         font-weight: bold;
         margin-top: -40%;
+        font-size: 4em;
       }
     }
+  }
 
+  div.section {
+
+    .main-title {
+      text-align: center;
+    }
+
+    .summarize-text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
   }
 }

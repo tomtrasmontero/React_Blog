@@ -25,23 +25,31 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    // loaders are used to transform es6 and other code
-    //  to readable syntax
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['es2015', 'react'] } },
+      { test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: { presets: ['es2015', 'react'] } },
       //  sass-loader compiles SCSS, css-loader allows us to require the SCSS
       //  and style-loader injects it to our page.
       { test: /\.html$/,
         loader: ['html-loader'] },
+
       { test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /node_modules/ },
+
       { test: /\.css$/,
         use: ['style-loader', 'css-loader'] },
+
       { test: /\.(png|jpg|jpeg|svg)$/,
         loader: 'url-loader?limit=8192&name=./assets/[name].[ext]' },
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' },
+
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader' },
     ],
   },
   plugins: [injectConfig, injectCleanPlugin],
