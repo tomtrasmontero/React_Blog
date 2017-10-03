@@ -8,6 +8,11 @@ class PostComment extends Component {
   constructor() {
     super();
     this.onSubmit = this.onSubmit.bind(this);
+
+    $(document).ready(() => {
+      // $('#textarea').val('New Text');
+      $('#textarea').trigger('autoresize');
+    });
   }
 
   onSubmit(values) {
@@ -22,17 +27,34 @@ class PostComment extends Component {
 
   renderField(field) {
     const { meta: { error, touched } } = field;
+    if (field.inputType === 'textarea') {
+      return (
+        <div>
+          <textarea
+            id="textarea"
+            className="materialize-textarea validate"
+            type={field.type}
+            {...field.input}
+          />
+          <label htmlFor={field.label}>{field.label}</label>
+          <span className="red-text">
+            {touched ? error : ''}
+          </span>
+        </div>
+      );
+    }
 
     return (
-      <div>
-        <label htmlFor={field.label}>{field.label}</label>
-        <div>
-          {touched ? error : ''}
-        </div>
+      <div className="input-field-type">
         <input
+          className="validate"
           type={field.type}
           {...field.input}
         />
+        <label htmlFor={field.label}>{field.label}</label>
+        <span className="red-text">
+          {touched ? error : ''}
+        </span>
       </div>
     );
   }
@@ -40,25 +62,37 @@ class PostComment extends Component {
   render() {
     const { handleSubmit, submitting, pristine } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.onSubmit)} >
-        <div>
-          <Field
-            name="userName"
-            label="User Name"
-            component={this.renderField}
-            type="text"
-          />
-          <Field
-            name="comment"
-            label="Comment"
-            component={this.renderField}
-            type="text"
-          />
-          <button
-            type="submit"
-            disabled={pristine || submitting}
-          >Submit
-          </button>
+      <form onSubmit={handleSubmit(this.onSubmit)}>
+        <div className="row">
+          <div className="col s1 m3" />
+          <div className="col s10 m6 z-depth-2">
+            <div className="input-field">
+              <Field
+                name="userName"
+                label="User Name"
+                component={this.renderField}
+                type="text"
+                inputType="input"
+              />
+            </div>
+            <div className="input-field">
+              <Field
+                name="comment"
+                label="Comment"
+                component={this.renderField}
+                type="textarea"
+                inputType="textarea"
+              />
+            </div>
+            <button
+              className="btn waves-effect waves-light comment-submit"
+              type="submit"
+              disabled={pristine || submitting}
+            > Submit
+              <i className="material-icons right">send</i>
+            </button>
+          </div>
+          <div className="col s1 m3" />
         </div>
       </form>
     );

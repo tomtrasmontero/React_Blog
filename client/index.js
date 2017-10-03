@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import thunk from 'redux-thunk';
-// import style sheets
+
 // important note: $/jquery is included in materialize css
 // no need to import it in webpack.config.js
 import 'materialize-css/dist/css/materialize.min.css';
@@ -16,14 +16,16 @@ import './styles/main.scss';
 import reducers from './reducers/index';
 import LandingPage from './components/LandingPage';
 import DetailBlog from './components/Detail_Blog';
+import Footer from './components/Footer';
 
 
 const createStoreWithMiddleware = createStore(reducers, applyMiddleware(promise, thunk));
 
 ReactDOM.render(
-  <div>
+  <main>
     <Provider store={createStoreWithMiddleware}>
-      <HashRouter>
+      {/* on change of url, scroll to top of the page */}
+      <HashRouter onUpdate={() => window.scrollTo(0, 0)}>
         <div>
           <Switch>
             <Route path="/blog/:id" component={DetailBlog} />
@@ -33,6 +35,7 @@ ReactDOM.render(
         </div>
       </HashRouter>
     </Provider>
-  </div>
+    <Footer />
+  </main>
   , document.getElementById('App'),
 );

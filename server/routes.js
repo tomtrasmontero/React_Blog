@@ -42,7 +42,9 @@ app.get('/blog/:id', (req, res, next) => {
 });
 
 app.get('/blogs', (req, res, next) => {
-  db.Blog.findAll({ where: {} })
+  db.Blog.findAll({
+    where: {},
+    include: [{ model: db.Comment }] })
     .then(blogs => res.send(blogs))
     .catch(next);
 });

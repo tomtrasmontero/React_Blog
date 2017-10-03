@@ -9,15 +9,25 @@ import NavBar from './NavBar';
 // import logo from '../assets/Landing_Img.jpg';
 
 class LandingPage extends Component {
+  constructor() {
+    super();
+
+    this.renderDate = this.renderDate.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchBlogs();
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
   }
 
   renderDate(date) {
     const monthsList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const newDate = new Date(date);
     const month = monthsList[newDate.getMonth()];
-    const day = newDate.getDay();
+    const day = newDate.getDate();
     const year = newDate.getFullYear();
 
     return `${month} ${day}, ${year}`;
@@ -27,14 +37,17 @@ class LandingPage extends Component {
     return this.props.blogs.map(blog => (
       <div key={blog.id}>
         <div>
-          <h2 className="main-title">{blog.title}</h2>
-          <span>{this.renderDate(blog.createdAt)}</span>
+          <Link to={`/blog/${blog.id}`} onClick={this.scrollToTop}>
+            <h2 className="main-title hoverable">{blog.title}</h2>
+          </Link>
+
+          <span><i className="material-icons">date_range</i> {this.renderDate(blog.createdAt)}</span>
           <blockquote className="flow-text summarize-text">{blog.body}</blockquote>
         </div>
 
         <div>
-          <Link to={`/blog/${blog.id}`}>
-            <p>link to detail pages with comments(comment#)</p>
+          <Link to={`/blog/${blog.id}`} onClick={this.scrollToTop}>
+            <p>Leave a Comment({blog.comments.length})</p>
           </Link>
         </div>
 
@@ -54,6 +67,8 @@ class LandingPage extends Component {
           </div>
 
           <NavBar />
+          <div className="divider" />
+
           <div className="section white">
             <div>
               <div className="container">

@@ -1,5 +1,17 @@
 @import "LandingPage";
 @import "NavBar";
+@import "Footer";
+@import "Comment_Form";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
 
 @media only screen and (max-device-width: 450px) {
     body #App {

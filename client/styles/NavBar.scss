@@ -8,15 +8,6 @@
     text-align: center;
     font-size: 2em;
 
-    // scaling animation
-    -webkit-transform: scale(1.0);
-     /* Browser Variations: */
-     -moz-transform: scale(1.0);
-     -o-transform: scale(1.0);
-     -webkit-transition-duration: 0.4s;
-     -moz-transition-duration: 0.4s;
-     -o-transition-duration: 0.4s;
-
      // underline animation
      position: relative;
      text-decoration: none;
@@ -37,8 +28,6 @@
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
-      -webkit-transition: all 0.2s ease-in-out 0s;
-      transition: all 0.2s ease-in-out 0s;
     }
 
     &:hover:before {
@@ -50,13 +39,12 @@
 
     &:hover {
       background: none;
-    //   // scaling animation
-    //   -webkit-transform: scale(0.8);
-    //   -moz-transform: scale(0.8);
-    //   -o-transform: scale(0.8);
-    //
-    //  // underline animation
-      color: #ff0000;
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -o-transform: scale(0.98);
+
+     // underline animation
+      color: #ee6e73;
     }
 
     &:focus {

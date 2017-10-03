@@ -20,9 +20,9 @@ class BlogPost extends Component {
     }
 
     const showComments = commentList.map(comment => (
-      <div key={comment.id}>
-        <h3>{comment.comment}</h3>
-        <p>By {comment.userName}</p>
+      <div key={comment.id} className="comment-post z-depth-2">
+        <p className="flow-text">{comment.comment}</p>
+        <h6>By {comment.userName}</h6>
       </div>
     ));
 
@@ -39,14 +39,22 @@ class BlogPost extends Component {
     return (
       <div>
         <NavBar />
-        <h3>Title: {blog.title}</h3>
-        <p>{blog.body}</p>
-
-        <div>
-          <PostComment blogId={blog.id} />
+        <article className="container">
+          <header>
+            <h3>Title: {blog.title}</h3>
+          </header>
           <br />
-          {!blog.comments ? '' : this.renderComment()}
-        </div>
+          <div className="divider" />
+          <p>{blog.body}</p>
+
+          <div className="divider" />
+          <h6>Comment Section:</h6>
+          <div>
+            <PostComment blogId={blog.id} />
+            <br />
+            {!blog.comments ? '' : this.renderComment()}
+          </div>
+        </article>
       </div>
     );
   }

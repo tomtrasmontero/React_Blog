@@ -37,6 +37,14 @@
 
     .main-title {
       text-align: center;
+      background: black;
+      color: #ffffff;
+
+      &:hover {
+        -webkit-transform: scale(0.98);
+        -moz-transform: scale(0.98);
+        -o-transform: scale(0.98);
+      }
     }
 
     .summarize-text {
