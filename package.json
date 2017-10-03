@@ -8,8 +8,7 @@
     "start": "node server/server.js",
     "start:webpack_frontend": "webpack-dev-server",
     "start:dev": "npm run webpack -- -w & SYNC=true DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
-    "webpack": "./node_modules/webpack/bin/webpack.js",
-    "heroku-postbuild": "npm run webpack"
+    "webpack": "./node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
