@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "DATABASE_URL=postgres://localhost/react_test_blog nodemon ./node_modules/mocha/bin/mocha",
+    "test":
+      "DATABASE_URL=postgres://localhost/react_test_blog nodemon ./node_modules/mocha/bin/mocha",
     "start": "node server/server.js",
     "start:webpack_frontend": "webpack-dev-server",
-    "start:dev": "npm run webpack -- -w & SYNC=true DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
+    "start:dev":
+      "npm run webpack -- -w & SYNC=true DATABASE_URL=postgres://localhost/react_blog nodemon --ignore client/ server/server.js",
     "webpack": "./node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
