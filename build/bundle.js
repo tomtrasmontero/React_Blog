@@ -46809,7 +46809,7 @@ exports = module.exports = __webpack_require__(162)(undefined);
 
 
 // module
-exports.push([module.i, "#LandingPage {\n  padding: 0px; }\n  #LandingPage div.coverImageContainer {\n    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(368) + ");\n    background-repeat: no-repeat;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: conver;\n    background-position: center;\n    width: 100%;\n    height: 100%;\n    margin: auto;\n    padding-top: 61.64%; }\n    #LandingPage div.coverImageContainer div.center-text-content {\n      text-align: center;\n      color: #d64b1f; }\n      #LandingPage div.coverImageContainer div.center-text-content p {\n        font-family: Roboto-Bold;\n        color: #ffffff;\n        font-weight: bold;\n        margin-top: -40%;\n        font-size: 4em; }\n  #LandingPage div.section .main-title {\n    text-align: center;\n    background: black;\n    color: #ffffff; }\n    #LandingPage div.section .main-title:hover {\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98); }\n  #LandingPage div.section .summarize-text {\n    overflow: hidden;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical; }\n\n#NavBar {\n  background-color: #ffffff;\n  box-shadow: unset;\n  margin: auto; }\n  #NavBar a {\n    color: #000000;\n    text-align: center;\n    font-size: 2em;\n    position: relative;\n    text-decoration: none; }\n    #NavBar a.NavBarClose {\n      text-align: right; }\n    #NavBar a:before {\n      content: \"\";\n      position: absolute;\n      width: 100%;\n      height: 1px;\n      bottom: 0;\n      left: 0;\n      background-color: #000;\n      visibility: hidden;\n      -webkit-transform: scaleX(0);\n      transform: scaleX(0); }\n    #NavBar a:hover:before {\n      visibility: visible;\n      -webkit-transform: scaleX(1);\n      transform: scaleX(1); }\n    #NavBar a:hover {\n      background: none;\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98);\n      color: #ee6e73; }\n    #NavBar a:focus {\n      background: none; }\n\nfooter {\n  margin-top: 5vh; }\n  footer div.footer-copyright {\n    background-color: #ee6e73; }\n    footer div.footer-copyright div.container {\n      background-color: #ee6e73;\n      color: #ffffff; }\n\nform {\n  padding-bottom: 1vh;\n  padding-top: 5vh; }\n  form input {\n    margin-top: 3vh; }\n  form button.comment-submit {\n    margin-bottom: 4vh; }\n  form .input-field-type {\n    margin-top: 4vh;\n    margin-bottom: 6vh; }\n  form textarea#textarea {\n    padding: 0.8rem 0 0.6rem 0; }\n\n.comment-post {\n  border-left-style: solid;\n  border-color: #d64b1f;\n  padding: 1vh 0 1vh 0;\n  margin-bottom: 4vh; }\n  .comment-post p, .comment-post h6 {\n    margin-left: 2vh; }\n\nbody {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n\nmain {\n  flex: 1 0 auto; }\n\n@media only screen and (max-device-width: 450px) {\n  body #App {\n    width: 100%; } }\n", ""]);
+exports.push([module.i, "#LandingPage {\n  padding: 0px; }\n  #LandingPage div.coverImageContainer {\n    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(368) + ");\n    background-repeat: no-repeat;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: conver;\n    background-position: center;\n    width: 100%;\n    height: 100%;\n    margin: auto;\n    padding-top: 61.64%; }\n    #LandingPage div.coverImageContainer div.center-text-content {\n      text-align: center;\n      color: #d64b1f; }\n      #LandingPage div.coverImageContainer div.center-text-content p {\n        font-family: Roboto-Bold;\n        color: #ffffff;\n        font-weight: bold;\n        margin-top: -40%;\n        font-size: 4em; }\n  #LandingPage div.section .main-title {\n    text-align: center;\n    background: black;\n    color: #ffffff; }\n    #LandingPage div.section .main-title:hover {\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98); }\n  #LandingPage div.section .summarize-text {\n    overflow: hidden;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical; }\n\n#NavBar {\n  background-color: #ffffff;\n  box-shadow: unset;\n  margin: auto; }\n  #NavBar a {\n    color: #000000;\n    text-align: center;\n    font-size: 2em;\n    position: relative;\n    text-decoration: none; }\n    #NavBar a.NavBarClose {\n      text-align: right; }\n    #NavBar a:before {\n      content: \"\";\n      position: absolute;\n      width: 100%;\n      height: 1px;\n      bottom: 0;\n      left: 0;\n      background-color: #000;\n      visibility: hidden;\n      -webkit-transform: scaleX(0);\n      transform: scaleX(0); }\n    #NavBar a:hover:before {\n      visibility: visible;\n      -webkit-transform: scaleX(1);\n      transform: scaleX(1); }\n    #NavBar a:hover {\n      background: none;\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98);\n      color: #ee6e73; }\n    #NavBar a:focus {\n      background: none; }\n\nfooter {\n  margin-top: 5vh; }\n  footer div.footer-copyright {\n    background-color: #ee6e73; }\n    footer div.footer-copyright div.container {\n      background-color: #ee6e73;\n      color: #ffffff; }\n\nform {\n  padding-bottom: 1vh;\n  padding-top: 5vh; }\n  form input {\n    margin-top: 3vh; }\n  form button.comment-submit {\n    margin-bottom: 4vh; }\n  form .input-field-type {\n    margin-top: 4vh;\n    margin-bottom: 6vh; }\n  form span.warning {\n    padding-left: 1rem; }\n  form textarea#textarea {\n    padding: 0.8rem 0 0.6rem 0; }\n\n.buttonContainer {\n  text-align: center; }\n\n.comment-post {\n  border-left-style: solid;\n  border-color: #d64b1f;\n  padding: 1vh 0 1vh 0;\n  margin-bottom: 4vh; }\n  .comment-post p, .comment-post h6 {\n    margin-left: 2vh; }\n\nhtml {\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.2; }\n\nmain {\n  flex: 1 0 auto; }\n\n@media only screen and (max-device-width: 450px) {\n  body #App {\n    width: 100%; } }\n", ""]);
 
 // exports
 
@@ -56075,8 +56075,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(3);
@@ -56092,6 +56090,10 @@ var _propTypes = __webpack_require__(6);
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _index = __webpack_require__(62);
+
+var _RenderField = __webpack_require__(557);
+
+var _RenderField2 = _interopRequireDefault(_RenderField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56110,11 +56112,6 @@ var PostComment = function (_Component) {
     var _this = _possibleConstructorReturn(this, (PostComment.__proto__ || Object.getPrototypeOf(PostComment)).call(this));
 
     _this.onSubmit = _this.onSubmit.bind(_this);
-
-    $(document).ready(function () {
-      // $('#textarea').val('New Text');
-      $('#textarea').trigger('autoresize');
-    });
     return _this;
   }
 
@@ -56126,56 +56123,10 @@ var PostComment = function (_Component) {
         comment: values.comment,
         blogId: this.props.blogId
       };
+      // clear form and reset size of textfield before submitting comment
       this.props.reset();
+      $('#textarea').height('30px');
       this.props.createComment(commentDataToSubmit);
-    }
-  }, {
-    key: 'renderField',
-    value: function renderField(field) {
-      var _field$meta = field.meta,
-          error = _field$meta.error,
-          touched = _field$meta.touched;
-
-      if (field.inputType === 'textarea') {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement('textarea', _extends({
-            id: 'textarea',
-            className: 'materialize-textarea validate',
-            type: field.type
-          }, field.input)),
-          _react2.default.createElement(
-            'label',
-            { htmlFor: field.label },
-            field.label
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: 'red-text' },
-            touched ? error : ''
-          )
-        );
-      }
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'input-field-type' },
-        _react2.default.createElement('input', _extends({
-          className: 'validate',
-          type: field.type
-        }, field.input)),
-        _react2.default.createElement(
-          'label',
-          { htmlFor: field.label },
-          field.label
-        ),
-        _react2.default.createElement(
-          'span',
-          { className: 'red-text' },
-          touched ? error : ''
-        )
-      );
     }
   }, {
     key: 'render',
@@ -56201,7 +56152,7 @@ var PostComment = function (_Component) {
               _react2.default.createElement(_reduxForm.Field, {
                 name: 'userName',
                 label: 'User Name',
-                component: this.renderField,
+                component: _RenderField2.default,
                 type: 'text',
                 inputType: 'input'
               })
@@ -56212,23 +56163,27 @@ var PostComment = function (_Component) {
               _react2.default.createElement(_reduxForm.Field, {
                 name: 'comment',
                 label: 'Comment',
-                component: this.renderField,
+                component: _RenderField2.default,
                 type: 'textarea',
                 inputType: 'textarea'
               })
             ),
             _react2.default.createElement(
-              'button',
-              {
-                className: 'btn waves-effect waves-light comment-submit',
-                type: 'submit',
-                disabled: pristine || submitting
-              },
-              ' Submit',
+              'div',
+              { className: 'buttonContainer' },
               _react2.default.createElement(
-                'i',
-                { className: 'material-icons right' },
-                'send'
+                'button',
+                {
+                  className: 'btn waves-effect waves-light comment-submit',
+                  type: 'submit',
+                  disabled: pristine || submitting
+                },
+                ' Submit',
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'send'
+                )
               )
             )
           ),
@@ -56268,7 +56223,7 @@ exports.default = (0, _reduxForm.reduxForm)({
   validate: validate,
   // name the form component
   form: 'PostCommentForm'
-})((0, _reactRedux.connect)(null, { createComment: _index.createComment })(PostComment));
+})((0, _reactRedux.connect)(null, { createComment: _index.createComment, renderField: _RenderField2.default })(PostComment));
 
 /***/ }),
 /* 556 */
@@ -56306,6 +56261,121 @@ var Footer = function Footer() {
 };
 
 exports.default = Footer;
+
+/***/ }),
+/* 557 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(6);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RenderField = function (_Component) {
+  _inherits(RenderField, _Component);
+
+  function RenderField(props) {
+    _classCallCheck(this, RenderField);
+
+    // activate textarea
+    var _this = _possibleConstructorReturn(this, (RenderField.__proto__ || Object.getPrototypeOf(RenderField)).call(this, props));
+
+    $(document).ready(function () {
+      // $('#textarea').val('Comment Here ...');
+      $('#textarea').trigger('autoresize');
+    });
+    return _this;
+  }
+
+  _createClass(RenderField, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          label = _props.label,
+          type = _props.type,
+          input = _props.input,
+          inputType = _props.inputType,
+          _props$meta = _props.meta,
+          error = _props$meta.error,
+          touched = _props$meta.touched;
+
+      if (inputType === 'textarea') {
+        return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('textarea', _extends({
+            id: 'textarea',
+            className: 'materialize-textarea validate',
+            type: type
+          }, input)),
+          _react2.default.createElement(
+            'label',
+            { htmlFor: label },
+            label,
+            _react2.default.createElement(
+              'span',
+              { className: 'red-text warning' },
+              touched ? error : ''
+            )
+          )
+        );
+      }
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'input-field-type' },
+        _react2.default.createElement('input', _extends({
+          className: 'validate',
+          type: type
+        }, input)),
+        _react2.default.createElement(
+          'label',
+          { htmlFor: label },
+          label,
+          _react2.default.createElement(
+            'span',
+            { className: 'red-text text-lighten-1 warning' },
+            touched ? error : ''
+          )
+        )
+      );
+    }
+  }]);
+
+  return RenderField;
+}(_react.Component);
+
+RenderField.propTypes = {
+  label: _propTypes2.default.string.isRequired,
+  type: _propTypes2.default.string.isRequired,
+  input: _propTypes2.default.shape({}).isRequired,
+  inputType: _propTypes2.default.string.isRequired,
+  meta: _propTypes2.default.shape({}).isRequired
+};
+
+exports.default = RenderField;
 
 /***/ })
 /******/ ]);

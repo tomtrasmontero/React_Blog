@@ -3,10 +3,20 @@
 @import "Footer";
 @import "Comment_Form";
 
+html {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+h1, h2, h3, h4, h5 {
+	line-height: 1.2;
 }
 
 main {
