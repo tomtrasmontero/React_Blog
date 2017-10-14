@@ -27336,7 +27336,7 @@ var _Detail_Blog = __webpack_require__(554);
 
 var _Detail_Blog2 = _interopRequireDefault(_Detail_Blog);
 
-var _Footer = __webpack_require__(556);
+var _Footer = __webpack_require__(557);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -46809,7 +46809,7 @@ exports = module.exports = __webpack_require__(162)(undefined);
 
 
 // module
-exports.push([module.i, "#LandingPage {\n  padding: 0px; }\n  #LandingPage div.coverImageContainer {\n    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(368) + ");\n    background-repeat: no-repeat;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: conver;\n    background-position: center;\n    width: 100%;\n    height: 100%;\n    margin: auto;\n    padding-top: 61.64%; }\n    #LandingPage div.coverImageContainer div.center-text-content {\n      text-align: center;\n      color: #d64b1f; }\n      #LandingPage div.coverImageContainer div.center-text-content p {\n        font-family: Roboto-Bold;\n        color: #ffffff;\n        font-weight: bold;\n        margin-top: -40%;\n        font-size: 4em; }\n  #LandingPage div.section .main-title {\n    text-align: center;\n    background: black;\n    color: #ffffff; }\n    #LandingPage div.section .main-title:hover {\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98); }\n  #LandingPage div.section .summarize-text {\n    overflow: hidden;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical; }\n\n#NavBar {\n  background-color: #ffffff;\n  box-shadow: unset;\n  margin: auto; }\n  #NavBar a {\n    color: #000000;\n    text-align: center;\n    font-size: 2em;\n    position: relative;\n    text-decoration: none; }\n    #NavBar a.NavBarClose {\n      text-align: right; }\n    #NavBar a:before {\n      content: \"\";\n      position: absolute;\n      width: 100%;\n      height: 1px;\n      bottom: 0;\n      left: 0;\n      background-color: #000;\n      visibility: hidden;\n      -webkit-transform: scaleX(0);\n      transform: scaleX(0); }\n    #NavBar a:hover:before {\n      visibility: visible;\n      -webkit-transform: scaleX(1);\n      transform: scaleX(1); }\n    #NavBar a:hover {\n      background: none;\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98);\n      color: #ee6e73; }\n    #NavBar a:focus {\n      background: none; }\n\nfooter {\n  margin-top: 5vh; }\n  footer div.footer-copyright {\n    background-color: #ee6e73; }\n    footer div.footer-copyright div.container {\n      background-color: #ee6e73;\n      color: #ffffff; }\n\nform {\n  padding-bottom: 1vh;\n  padding-top: 5vh; }\n  form input {\n    margin-top: 3vh; }\n  form button.comment-submit {\n    margin-bottom: 4vh; }\n  form .input-field-type {\n    margin-top: 4vh;\n    margin-bottom: 6vh; }\n  form span.warning {\n    padding-left: 1rem; }\n  form textarea#textarea {\n    padding: 0.8rem 0 0.6rem 0; }\n\n.buttonContainer {\n  text-align: center; }\n\n.comment-post {\n  border-left-style: solid;\n  border-color: #d64b1f;\n  padding: 1vh 0 1vh 0;\n  margin-bottom: 4vh; }\n  .comment-post p, .comment-post h6 {\n    margin-left: 2vh; }\n\nhtml {\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.2; }\n\nmain {\n  flex: 1 0 auto; }\n\n@media only screen and (max-device-width: 450px) {\n  body #App {\n    width: 100%; } }\n", ""]);
+exports.push([module.i, "#LandingPage {\n  padding: 0px; }\n  #LandingPage div.coverImageContainer {\n    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + __webpack_require__(368) + ");\n    background-repeat: no-repeat;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: conver;\n    background-position: center;\n    width: 100%;\n    height: 100%;\n    margin: auto;\n    padding-top: 61.64%; }\n    #LandingPage div.coverImageContainer div.center-text-content {\n      text-align: center;\n      color: #d64b1f; }\n      #LandingPage div.coverImageContainer div.center-text-content p {\n        font-family: Roboto-Bold;\n        color: #ffffff;\n        font-weight: bold;\n        margin-top: -40%;\n        font-size: 4em; }\n  #LandingPage div.section .main-title {\n    text-align: center;\n    background: black;\n    color: #ffffff; }\n    #LandingPage div.section .main-title:hover {\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98); }\n  #LandingPage div.section .summarize-text {\n    overflow: hidden;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical; }\n\n#NavBar {\n  background-color: #ffffff;\n  box-shadow: unset;\n  margin: auto; }\n  #NavBar a {\n    color: #000000;\n    text-align: center;\n    font-size: 2em;\n    position: relative;\n    text-decoration: none; }\n    #NavBar a.NavBarClose {\n      text-align: right; }\n    #NavBar a:before {\n      content: \"\";\n      position: absolute;\n      width: 100%;\n      height: 1px;\n      bottom: 0;\n      left: 0;\n      background-color: #000;\n      visibility: hidden;\n      -webkit-transform: scaleX(0);\n      transform: scaleX(0); }\n    #NavBar a:hover:before {\n      visibility: visible;\n      -webkit-transform: scaleX(1);\n      transform: scaleX(1); }\n    #NavBar a:hover {\n      background: none;\n      -webkit-transform: scale(0.98);\n      -moz-transform: scale(0.98);\n      -o-transform: scale(0.98);\n      color: #ee6e73; }\n    #NavBar a:focus {\n      background: none; }\n\nfooter {\n  margin-top: 5vh; }\n  footer div.footer-copyright {\n    background-color: #ee6e73; }\n    footer div.footer-copyright div.container {\n      background-color: #ee6e73;\n      color: #ffffff; }\n\nform {\n  padding-bottom: 1vh;\n  padding-top: 5vh; }\n  form input {\n    margin-top: 3vh; }\n  form button.comment-submit {\n    margin-bottom: 4vh; }\n  form .input-field-type {\n    margin-top: 4vh; }\n  form span.warning {\n    padding-left: 1rem; }\n  form textarea#textarea {\n    padding: 0.8rem 0 0.6rem 0; }\n\n.buttonContainer {\n  text-align: center; }\n\n.comment-post {\n  border-left-style: solid;\n  border-color: #d64b1f;\n  padding: 1vh 0 1vh 0;\n  margin-bottom: 4vh; }\n  .comment-post p, .comment-post h4 {\n    margin-left: 2vh; }\n  .comment-post div h4 {\n    margin-bottom: 0px; }\n  .comment-post div.dateContainer {\n    text-align: right;\n    padding-right: 1rem; }\n  @media only screen and (max-device-width: 450px) {\n    .comment-post div.dateContainer {\n      text-align: left;\n      padding-left: 2rem; } }\n\nhtml {\n  line-height: 1.6;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.2; }\n\nmain {\n  flex: 1 0 auto; }\n\n@media only screen and (max-device-width: 450px) {\n  body #App {\n    width: 100%; } }\n", ""]);
 
 // exports
 
@@ -55926,6 +55926,10 @@ var _NavBar = __webpack_require__(198);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
+var _RenderComment = __webpack_require__(558);
+
+var _RenderComment2 = _interopRequireDefault(_RenderComment);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55949,38 +55953,6 @@ var BlogPost = function (_Component) {
       var id = this.props.match.params.id;
 
       this.props.fetchBlog(id);
-    }
-  }, {
-    key: 'renderComment',
-    value: function renderComment() {
-      var commentList = this.props.blogs[0].comments;
-      if (commentList.length === 0) {
-        return _react2.default.createElement(
-          'div',
-          null,
-          'Be the first to Comment!'
-        );
-      }
-
-      var showComments = commentList.map(function (comment) {
-        return _react2.default.createElement(
-          'div',
-          { key: comment.id, className: 'comment-post z-depth-2' },
-          _react2.default.createElement(
-            'p',
-            { className: 'flow-text' },
-            comment.comment
-          ),
-          _react2.default.createElement(
-            'h6',
-            null,
-            'By ',
-            comment.userName
-          )
-        );
-      });
-
-      return showComments;
     }
   }, {
     key: 'render',
@@ -56007,8 +55979,12 @@ var BlogPost = function (_Component) {
             _react2.default.createElement(
               'h3',
               null,
-              'Title: ',
-              blog.title
+              _react2.default.createElement(
+                'strong',
+                null,
+                'Title: ',
+                blog.title
+              )
             )
           ),
           _react2.default.createElement('br', null),
@@ -56022,14 +55998,18 @@ var BlogPost = function (_Component) {
           _react2.default.createElement(
             'h6',
             null,
-            'Comment Section:'
+            _react2.default.createElement(
+              'strong',
+              null,
+              'Comment Section:'
+            )
           ),
           _react2.default.createElement(
             'div',
             null,
             _react2.default.createElement(_Comment_Form2.default, { blogId: blog.id }),
             _react2.default.createElement('br', null),
-            !blog.comments ? '' : this.renderComment()
+            !blog.comments ? '' : _react2.default.createElement(_RenderComment2.default, { comment: blog.comments })
           )
         )
       );
@@ -56091,7 +56071,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _index = __webpack_require__(62);
 
-var _RenderField = __webpack_require__(557);
+var _RenderField = __webpack_require__(556);
 
 var _RenderField2 = _interopRequireDefault(_RenderField);
 
@@ -56236,43 +56216,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Footer = function Footer() {
-  var footer = _react2.default.createElement(
-    "footer",
-    null,
-    _react2.default.createElement(
-      "div",
-      { className: "footer-copyright" },
-      _react2.default.createElement(
-        "div",
-        { className: "container center-align" },
-        "Made by TT 2017"
-      )
-    )
-  );
-
-  return footer;
-};
-
-exports.default = Footer;
-
-/***/ }),
-/* 557 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -56337,7 +56280,12 @@ var RenderField = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'red-text warning' },
-              touched ? error : ''
+              touched ? error : '',
+              touched && error ? _react2.default.createElement(
+                'i',
+                { className: 'smaller material-icons' },
+                'error_outline'
+              ) : ''
             )
           )
         );
@@ -56357,7 +56305,12 @@ var RenderField = function (_Component) {
           _react2.default.createElement(
             'span',
             { className: 'red-text text-lighten-1 warning' },
-            touched ? error : ''
+            touched ? error : '',
+            touched && error ? _react2.default.createElement(
+              'i',
+              { className: 'smaller material-icons' },
+              'error_outline'
+            ) : ''
           )
         )
       );
@@ -56376,6 +56329,124 @@ RenderField.propTypes = {
 };
 
 exports.default = RenderField;
+
+/***/ }),
+/* 557 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  var footer = _react2.default.createElement(
+    "footer",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "footer-copyright" },
+      _react2.default.createElement(
+        "div",
+        { className: "container center-align" },
+        "Made by TT 2017"
+      )
+    )
+  );
+
+  return footer;
+};
+
+exports.default = Footer;
+
+/***/ }),
+/* 558 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var renderDate = function renderDate(date) {
+  var monthsList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var newDate = new Date(date);
+  var month = monthsList[newDate.getMonth()];
+  var day = newDate.getDate();
+  var year = newDate.getFullYear();
+
+  return month + ' ' + day + ', ' + year;
+};
+
+var RenderComment = function RenderComment(prop) {
+  var commentList = prop.comment;
+
+  if (commentList.length === 0) {
+    return _react2.default.createElement(
+      'div',
+      null,
+      'Be the first to Comment!'
+    );
+  }
+
+  var showComments = commentList.map(function (comment) {
+    return _react2.default.createElement(
+      'div',
+      { key: comment.id, className: 'comment-post z-depth-2' },
+      _react2.default.createElement(
+        'div',
+        { className: 'row' },
+        _react2.default.createElement(
+          'div',
+          { className: 'col s12 m8' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            comment.userName
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'col s12 m4 dateContainer' },
+          _react2.default.createElement(
+            'date',
+            null,
+            renderDate(comment.createdAt)
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'flow-text' },
+        comment.comment
+      )
+    );
+  });
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    showComments
+  );
+};
+
+exports.default = RenderComment;
 
 /***/ })
 /******/ ]);

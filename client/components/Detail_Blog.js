@@ -4,29 +4,12 @@ import { connect } from 'react-redux';
 import { fetchBlog } from '../actions/index';
 import PostComment from './Comment_Form';
 import NavBar from './NavBar';
+import RenderComment from './RenderComment';
 
 class BlogPost extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.fetchBlog(id);
-  }
-
-  renderComment() {
-    const commentList = this.props.blogs[0].comments;
-    if (commentList.length === 0) {
-      return (
-        <div>Be the first to Comment!</div>
-      );
-    }
-
-    const showComments = commentList.map(comment => (
-      <div key={comment.id} className="comment-post z-depth-2">
-        <p className="flow-text">{comment.comment}</p>
-        <h6>By {comment.userName}</h6>
-      </div>
-    ));
-
-    return showComments;
   }
 
 
@@ -41,18 +24,18 @@ class BlogPost extends Component {
         <NavBar />
         <article className="container">
           <header>
-            <h3>Title: {blog.title}</h3>
+            <h3><strong>Title: {blog.title}</strong></h3>
           </header>
           <br />
           <div className="divider" />
           <p>{blog.body}</p>
 
           <div className="divider" />
-          <h6>Comment Section:</h6>
+          <h6><strong>Comment Section:</strong></h6>
           <div>
             <PostComment blogId={blog.id} />
             <br />
-            {!blog.comments ? '' : this.renderComment()}
+            {!blog.comments ? '' : <RenderComment comment={blog.comments} />}
           </div>
         </article>
       </div>

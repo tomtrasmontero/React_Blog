@@ -27,6 +27,7 @@ class RenderField extends Component {
             {label}
             <span className="red-text warning">
               {touched ? error : ''}
+              {touched && error ? <i className="smaller material-icons">error_outline</i> : ''}
             </span>
           </label>
         </div>
@@ -44,6 +45,7 @@ class RenderField extends Component {
           {label}
           <span className="red-text text-lighten-1 warning">
             {touched ? error : ''}
+            {touched && error ? <i className="smaller material-icons">error_outline</i> : ''}
           </span>
         </label>
       </div>
