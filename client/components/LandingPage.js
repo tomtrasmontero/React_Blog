@@ -4,33 +4,18 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { fetchBlogs } from '../actions/index';
 import NavBar from './NavBar';
+import renderDate from '../utils';
 
 // import assets here
 // import logo from '../assets/Landing_Img.jpg';
 
 class LandingPage extends Component {
-  constructor() {
-    super();
-
-    this.renderDate = this.renderDate.bind(this);
-  }
-
   componentDidMount() {
     this.props.fetchBlogs();
   }
 
   scrollToTop() {
     window.scrollTo(0, 0);
-  }
-
-  renderDate(date) {
-    const monthsList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const newDate = new Date(date);
-    const month = monthsList[newDate.getMonth()];
-    const day = newDate.getDate();
-    const year = newDate.getFullYear();
-
-    return `${month} ${day}, ${year}`;
   }
 
   renderBlog() {
@@ -41,7 +26,7 @@ class LandingPage extends Component {
             <h2 className="main-title hoverable">{blog.title}</h2>
           </Link>
 
-          <span><i className="material-icons">date_range</i> {this.renderDate(blog.createdAt)}</span>
+          <span><i className="material-icons">date_range</i> {renderDate(blog.createdAt)}</span>
           <blockquote className="flow-text summarize-text">{blog.body}</blockquote>
         </div>
 
