@@ -1,4 +1,4 @@
-import { FETCH_BLOGS, FETCH_BLOG, CREATE_COMMENT } from '../actions/index';
+import { FETCH_BLOGS, FETCH_BLOG, CREATE_COMMENT } from '../actions/ActionTypes';
 
 const ROOT_STATE = [];
 

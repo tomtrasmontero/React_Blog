@@ -1,7 +1,5 @@
 import axios from 'axios';
-
-export const FETCH_BLOGS = 'fetch_blogs';
-export const FETCH_BLOG = 'fetch_blog';
+import * as actions from './ActionTypes';
 
 export const fetchBlogs = () => {
   const request = axios.get('/api/blogs');
@@ -10,7 +8,7 @@ export const fetchBlogs = () => {
     request
       .then((result) => {
         dispatch({
-          type: FETCH_BLOGS,
+          type: actions.FETCH_BLOGS,
           payload: result,
         });
       });
@@ -24,7 +22,7 @@ export const fetchBlog = (id) => {
     request
       .then((result) => {
         dispatch({
-          type: FETCH_BLOG,
+          type: actions.FETCH_BLOG,
           payload: result,
         });
       });
