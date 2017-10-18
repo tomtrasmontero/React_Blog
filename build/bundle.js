@@ -19617,12 +19617,14 @@ var fetchBlogs = exports.fetchBlogs = function fetchBlogs() {
   var request = _axios2.default.get('/api/blogs');
 
   return function (dispatch) {
-    request.then(function (result) {
+    var action = request.then(function (result) {
       dispatch({
         type: actions.FETCH_BLOGS,
         payload: result
       });
     });
+
+    return action;
   };
 };
 

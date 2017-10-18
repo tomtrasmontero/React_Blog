@@ -5,13 +5,15 @@ export const fetchBlogs = () => {
   const request = axios.get('/api/blogs');
 
   return (dispatch) => {
-    request
+    const action = request
       .then((result) => {
         dispatch({
           type: actions.FETCH_BLOGS,
           payload: result,
         });
       });
+
+    return action;
   };
 };
 

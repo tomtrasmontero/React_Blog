@@ -1,9 +1,9 @@
-import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-// use similar to axios
+import { expect } from 'chai';
 import moxios from 'moxios';
-import * as actions from '../../actions/index';
-import * as types from '../../actions/ActionTypes';
+import configureMockStore from 'redux-mock-store';
+import * as actionsType from '../../actions/ActionTypes';
+import * as action from '../../actions/index';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -17,27 +17,20 @@ describe('actions', () => {
     moxios.uninstall();
   });
 
-  describe('fetch blogs', () => {
-    it('should fetch all the blogs', () => {
-
-      const store = mockStore({});
-      const test = store.dispatch(actions.fetchBlogs());
-      console.log(test);
-      // return store.dispatch(actions.fetchBlogs())
-      //   .then(() => {
-      //     // expect(store.getActions()).toEqual({});
-      //     expect(types.FETCH_BLOGS).toEqual('fetch_blogs');
-      //   });
+  it('calls the correct actions', () => {
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: { message: 'success', status: '200' },
+      });
     });
 
-    it('should fetch a blog', () => {
-      expect(types.FETCH_BLOG).toEqual('fetch_blog');
+    const store = mockStore({});
+    return store.dispatch(action.fetchBlogs()).then(() => {
+      // console.log(store.getActions());
+      expect(store.getActions()[0].type).to.equal(actionsType.FETCH_BLOGS);
+      expect(store.getActions()[0].payload.data).to.eql({ message: 'success', status: '200' });
     });
   });
-  // test action fetch_blogs
-
-  // test action fetch_blog
-
-  // test action fetch_comment
-  //
 });
