@@ -19617,12 +19617,14 @@ var fetchBlogs = exports.fetchBlogs = function fetchBlogs() {
   var request = _axios2.default.get('/api/blogs');
 
   return function (dispatch) {
-    request.then(function (result) {
+    var action = request.then(function (result) {
       dispatch({
         type: actions.FETCH_BLOGS,
         payload: result
       });
     });
+
+    return action;
   };
 };
 
@@ -19630,12 +19632,14 @@ var fetchBlog = exports.fetchBlog = function fetchBlog(id) {
   var request = _axios2.default.get('/api/blog/' + id);
 
   return function (dispatch) {
-    request.then(function (result) {
+    var action = request.then(function (result) {
       dispatch({
         type: actions.FETCH_BLOG,
         payload: result
       });
     });
+
+    return action;
   };
 };
 
@@ -19643,9 +19647,11 @@ var createComment = exports.createComment = function createComment(data) {
   var request = _axios2.default.post('/api/blog/comment', data);
 
   return function (dispatch) {
-    request.then(function (result) {
+    var action = request.then(function (result) {
       dispatch(fetchBlog(result.data.blogId));
     });
+
+    return action;
   };
 };
 
