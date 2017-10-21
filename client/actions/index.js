@@ -19,7 +19,6 @@ export const fetchBlogs = () => {
 
 export const fetchBlog = (id) => {
   const request = axios.get(`/api/blog/${id}`);
-
   return (dispatch) => {
     const action = request
       .then((result) => {

@@ -19630,7 +19630,6 @@ var fetchBlogs = exports.fetchBlogs = function fetchBlogs() {
 
 var fetchBlog = exports.fetchBlog = function fetchBlog(id) {
   var request = _axios2.default.get('/api/blog/' + id);
-
   return function (dispatch) {
     var action = request.then(function (result) {
       dispatch({

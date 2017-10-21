@@ -30,9 +30,28 @@ describe('actions', () => {
     });
 
     return store.dispatch(action.fetchBlogs()).then(() => {
+      // request.config is whats being passed to axios
       // console.log(store.getActions(), 'actions got called');
       expect(store.getActions()[0].type).to.equal(actionsType.FETCH_BLOGS);
-      expect(store.getActions()[0].payload.data).to.equall(mockResult);
+      expect(store.getActions()[0].payload.data).to.equal(mockResult);
+    });
+  });
+
+  it('fetches a single blog', () => {
+    const store = mockStore({});
+    const mockResult = { data: { id: 2, foo: 'baz' } };
+    const blogId = 1;
+
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: mockResult,
+      });
+    });
+
+    return store.dispatch(action.fetchBlog(blogId)).then(() => {
+      expect(store.getActions()[0].type).to.equal(actionsType.FETCH_BLOG);
     });
   });
 });
