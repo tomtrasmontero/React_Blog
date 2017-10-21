@@ -1,8 +1,8 @@
 import thunk from 'redux-thunk';
-import moxios from 'moxios';
 import { expect } from 'chai';
+import moxios from 'moxios';
 import configureMockStore from 'redux-mock-store';
-import * as actionType from '../../actions/ActionTypes';
+import * as actionsType from '../../actions/ActionTypes';
 import * as action from '../../actions/index';
 
 const middlewares = [thunk];
@@ -31,7 +31,7 @@ describe('actions', () => {
 
     return store.dispatch(action.fetchBlogs()).then(() => {
       // console.log(store.getActions(), 'actions got called');
-      expect(store.getActions()[0].type).to.equal(actionType.FETCH_BLOGS);
+      expect(store.getActions()[0].type).to.equal(actionsType.FETCH_BLOGS);
       expect(store.getActions()[0].payload.data).to.equall(mockResult);
     });
   });
