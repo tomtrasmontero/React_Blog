@@ -32,7 +32,7 @@ describe('actions', () => {
     return store.dispatch(action.fetchBlogs()).then(() => {
       // console.log(store.getActions(), 'actions got called');
       expect(store.getActions()[0].type).to.equal(actionType.FETCH_BLOGS);
-      expect(store.getActions()[0].payload.data).to.eql(mockResult);
+      expect(store.getActions()[0].payload.data).to.equall(mockResult);
     });
   });
 });
