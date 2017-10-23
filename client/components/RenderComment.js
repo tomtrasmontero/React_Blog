@@ -17,9 +17,10 @@ const RenderComment = (prop) => {
           <h4>{comment.userName}</h4>
         </div>
         <div className="col s12 m4 dateContainer">
-          <date>{renderDate(comment.createdAt)}</date>
+          <div>{renderDate(comment.createdAt)}</div>
         </div>
       </div>
+      <div className="divider" />
       <p className="flow-text">{comment.comment}</p>
     </div>
   ));

@@ -15,6 +15,7 @@ class BlogPost extends Component {
 
   render() {
     const blog = this.props.blogs[0];
+
     if (!blog) {
       return <div>Loading...</div>;
     }
@@ -26,9 +27,8 @@ class BlogPost extends Component {
           <header>
             <h3><strong>Title: {blog.title}</strong></h3>
           </header>
-          <br />
           <div className="divider" />
-          <p>{blog.body}</p>
+          <p className="blogBody">{blog.body}</p>
 
           <div className="divider" />
           <h6><strong>Comment Section:</strong></h6>

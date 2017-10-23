@@ -9,7 +9,7 @@ import renderDate from '../utils';
 // import assets here
 // import logo from '../assets/Landing_Img.jpg';
 
-class LandingPage extends Component {
+export class LandingPage extends Component {
   componentDidMount() {
     this.props.fetchBlogs();
   }
@@ -31,11 +31,12 @@ class LandingPage extends Component {
         </div>
 
         <div>
-          <Link to={`/blog/${blog.id}`} onClick={this.scrollToTop}>
-            <p>Leave a Comment({blog.comments.length})</p>
-          </Link>
+          <p>
+            <Link to={`/blog/${blog.id}`} onClick={this.scrollToTop}>
+            Leave a Comment({blog.comments.length})
+            </Link>
+          </p>
         </div>
-
         <div className="divider" />
       </div>
     ));

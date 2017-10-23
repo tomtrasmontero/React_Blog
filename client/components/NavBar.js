@@ -101,6 +101,7 @@ class Navbar extends Component {
             </li>
           </ul>
         </div>
+        <div className="divider" />
       </nav>
     );
   }
