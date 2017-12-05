@@ -26,13 +26,9 @@ class Navbar extends Component {
               </Link>
             </li>
             <li className="col s3">
-              <a
-                href="http://tomtrasmontero.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Portfolio
-              </a>
+              <Link to={'/logIn'}>
+                Log In
+              </Link>
             </li>
             <li className="col s3">
               <a

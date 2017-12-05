@@ -14,10 +14,10 @@ import './styles/main.scss';
 
 
 import reducers from './reducers/index';
-import LandingPage from './components/LandingPage';
+import HomePage from './components/LandingPage';
 import DetailBlog from './components/Detail_Blog';
 import Footer from './components/Footer';
-
+import LogIn from './components/Log_In';
 
 const createStoreWithMiddleware = createStore(reducers, applyMiddleware(promise, thunk));
 
@@ -29,8 +29,8 @@ ReactDOM.render(
         <div>
           <Switch>
             <Route path="/blog/:id" component={DetailBlog} />
-
-            <Route path="/" component={LandingPage} />
+            <Route path="/login" component={LogIn} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </div>
       </HashRouter>
